@@ -16,6 +16,11 @@
 		2F26232029363D5400898BB6 /* LocationListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F26231F29363D5400898BB6 /* LocationListView.swift */; };
 		2F26232229363D7C00898BB6 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F26232129363D7C00898BB6 /* ProfileView.swift */; };
 		2FDFD02C2969AA4600C23098 /* LocationDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDFD02B2969AA4600C23098 /* LocationDetailView.swift */; };
+		2FDFD02E296E236E00C23098 /* LocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDFD02D296E236E00C23098 /* LocationCell.swift */; };
+		2FDFD030296E241000C23098 /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDFD02F296E241000C23098 /* AvatarView.swift */; };
+		2FDFD034296E290500C23098 /* CustomModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDFD033296E290500C23098 /* CustomModifiers.swift */; };
+		2FDFD036296E294100C23098 /* View+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDFD035296E294100C23098 /* View+Ext.swift */; };
+		2FDFD038296E2A2400C23098 /* DDGButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDFD037296E2A2400C23098 /* DDGButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +35,11 @@
 		2F26231F29363D5400898BB6 /* LocationListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationListView.swift; sourceTree = "<group>"; };
 		2F26232129363D7C00898BB6 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		2FDFD02B2969AA4600C23098 /* LocationDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailView.swift; sourceTree = "<group>"; };
+		2FDFD02D296E236E00C23098 /* LocationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCell.swift; sourceTree = "<group>"; };
+		2FDFD02F296E241000C23098 /* AvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
+		2FDFD033296E290500C23098 /* CustomModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomModifiers.swift; sourceTree = "<group>"; };
+		2FDFD035296E294100C23098 /* View+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Ext.swift"; sourceTree = "<group>"; };
+		2FDFD037296E2A2400C23098 /* DDGButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDGButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,16 +72,12 @@
 		2F262309293592E900898BB6 /* SA_DubDubGrub */ = {
 			isa = PBXGroup;
 			children = (
+				2FDFD039296E2C3800C23098 /* Extensions */,
+				2FDFD03A296E2C4F00C23098 /* Views */,
 				2F2623182935933C00898BB6 /* SA_DubDubGrub.entitlements */,
 				2F26230A293592E900898BB6 /* SA_DubDubGrubApp.swift */,
 				2F26230E293592EA00898BB6 /* Assets.xcassets */,
 				2F262310293592EA00898BB6 /* Preview Content */,
-				2F2623192936398500898BB6 /* Color+Ext.swift */,
-				2F26231B29363A0000898BB6 /* AppTabView.swift */,
-				2F26231D29363D1300898BB6 /* LocationMapView.swift */,
-				2F26231F29363D5400898BB6 /* LocationListView.swift */,
-				2F26232129363D7C00898BB6 /* ProfileView.swift */,
-				2FDFD02B2969AA4600C23098 /* LocationDetailView.swift */,
 			);
 			path = SA_DubDubGrub;
 			sourceTree = "<group>";
@@ -82,6 +88,55 @@
 				2F262311293592EA00898BB6 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		2FDFD039296E2C3800C23098 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2F2623192936398500898BB6 /* Color+Ext.swift */,
+				2FDFD035296E294100C23098 /* View+Ext.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		2FDFD03A296E2C4F00C23098 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2FDFD033296E290500C23098 /* CustomModifiers.swift */,
+				2FDFD03D296E2C9100C23098 /* CustomViews */,
+				2FDFD03C296E2C8100C23098 /* Cells */,
+				2FDFD03B296E2C5700C23098 /* Screens */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2FDFD03B296E2C5700C23098 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				2F26231B29363A0000898BB6 /* AppTabView.swift */,
+				2F26232129363D7C00898BB6 /* ProfileView.swift */,
+				2FDFD02B2969AA4600C23098 /* LocationDetailView.swift */,
+				2F26231D29363D1300898BB6 /* LocationMapView.swift */,
+				2F26231F29363D5400898BB6 /* LocationListView.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		2FDFD03C296E2C8100C23098 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				2FDFD02D296E236E00C23098 /* LocationCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		2FDFD03D296E2C9100C23098 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				2FDFD037296E2A2400C23098 /* DDGButton.swift */,
+				2FDFD02F296E241000C23098 /* AvatarView.swift */,
+			);
+			path = CustomViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -155,11 +210,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F26230B293592E900898BB6 /* SA_DubDubGrubApp.swift in Sources */,
+				2FDFD034296E290500C23098 /* CustomModifiers.swift in Sources */,
 				2F26231E29363D1300898BB6 /* LocationMapView.swift in Sources */,
 				2F26232029363D5400898BB6 /* LocationListView.swift in Sources */,
 				2FDFD02C2969AA4600C23098 /* LocationDetailView.swift in Sources */,
 				2F26231C29363A0000898BB6 /* AppTabView.swift in Sources */,
 				2F26232229363D7C00898BB6 /* ProfileView.swift in Sources */,
+				2FDFD036296E294100C23098 /* View+Ext.swift in Sources */,
+				2FDFD02E296E236E00C23098 /* LocationCell.swift in Sources */,
+				2FDFD038296E2A2400C23098 /* DDGButton.swift in Sources */,
+				2FDFD030296E241000C23098 /* AvatarView.swift in Sources */,
 				2F26231A2936398500898BB6 /* Color+Ext.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

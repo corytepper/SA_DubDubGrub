@@ -17,24 +17,16 @@ struct LocationDetailView: View {
     
     var body: some View {
         VStack(spacing: 16) {
-            Image("default-banner-asset")
-                .resizable()
-                .scaledToFill()
-                .frame(height: 120)
+            BannerImageView(imageName: "default-banner-asset")
             
             HStack {
-                Label("123 Main Street", systemImage: "mappin.and.ellipse")
-                    .font(.caption)
-                    .foregroundColor(.secondary)
+                addressView(address: "123 Main Street")
                 
                 Spacer()
             }
             .padding(.horizontal)
             
-            Text("This is a test description.This is a test description.This is a test description.")
-                .lineLimit(3)
-                .minimumScaleFactor(0.75)
-                .padding(.horizontal)
+            DescriptionView(description: "This is a test description.This is a test description.This is a test description.")
             
             ZStack {
                 Capsule()
@@ -48,7 +40,7 @@ struct LocationDetailView: View {
                         LocationActionButton(color: .brandPrimary, imageName: "location.fill")
                     }
                     Link(destination: URL(string: "https://www.apple.com")!, label: {
-                        LocationActionButton(color: .brandPrimary, imageName: "phone.fill")
+                        LocationActionButton(color: .brandPrimary, imageName: "globe")
                     })
                     
                     Button {
@@ -68,6 +60,7 @@ struct LocationDetailView: View {
             Text("Who's Here?")
                 .bold()
                 .font(.title2)
+            
             ScrollView {
                 LazyVGrid(columns: columns , content: {
                     FirstNameAvatarView(firstName: "Cory")
@@ -79,13 +72,12 @@ struct LocationDetailView: View {
                     FirstNameAvatarView(firstName: "Cory")
                 })
             }
-            
-            
         }
         .navigationTitle("Location Name")
         .navigationBarTitleDisplayMode(.inline)
     }
 }
+
 
 struct LocationDetailView_Previews: PreviewProvider {
     static var previews: some View {
@@ -94,6 +86,7 @@ struct LocationDetailView_Previews: PreviewProvider {
         }
     }
 }
+
 
 struct LocationActionButton: View {
     var color: Color
@@ -125,5 +118,43 @@ struct FirstNameAvatarView: View {
                 .lineLimit(1)
                 .minimumScaleFactor(0.75)
         }
+    }
+}
+
+
+struct BannerImageView: View {
+    
+    var imageName: String
+    
+    var body: some View {
+        Image(imageName)
+            .resizable()
+            .scaledToFill()
+            .frame(height: 120)
+    }
+}
+
+
+struct addressView: View {
+    
+    var address: String
+    
+    var body: some View {
+        Label(address, systemImage: "mappin.and.ellipse")
+            .font(.caption)
+            .foregroundColor(.secondary)
+    }
+}
+
+
+struct DescriptionView: View {
+    
+    var description: String
+    
+    var body: some View {
+        Text(description)
+            .lineLimit(3)
+            .minimumScaleFactor(0.75)
+            .padding(.horizontal)
     }
 }
